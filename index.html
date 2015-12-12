@@ -1,0 +1,50 @@
+<!doctype html>
+
+<html lang="en" ng-app="mathGame">
+<head>
+	<meta charset="utf-8">
+	<title>The Math Game</title>
+	<meta name="description" content="Math Game">
+	<link rel="stylesheet" href="styles.css?v=1.0">
+	<script src="bower_components/jquery/dist/jquery.min.js"></script>
+	<script src="bower_components/angular/angular.min.js"></script>
+</head>
+
+<body ng-controller="mathGameController">
+
+
+	<div class="timer start"ng-click="numberGenerator()">Start</div>
+	<div class="wrapperTop">
+		<div class="numbers top" ng-repeat="numerator in top track by $index" ng-cloak>{{numerator}}</div>
+	</div>
+	<div class="wrapperBottom">
+		<div class="numbers bottom" ng-repeat="denominator in bottom track by $index" ng-cloak>{{denominator}}</div>
+	</div>
+
+	<div class="wrapperAnswer">
+		<input type="number" ng-repeat="inputs in top track by $index" ng-model="userAnswers[$index]" ng-cloak/>
+		<div class="numbers answer" ng-repeat="(key, value) in wrongAnswers" ng-cloak ng-if="!value">&#10060</div>
+		<div class="numbers answer" ng-repeat="(key, value) in wrongAnswers" ng-cloak ng-if="value">&#9989</div>
+	</div>
+	<div class="timer stop" ng-click="stopTime()" ng-if="shower">Stop</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	<script src="js/app.js"></script>
+	<script src="js/mathGameController.js"></script>
+	<script src="js/mathGameService.js"></script>
+</body>
+</html>

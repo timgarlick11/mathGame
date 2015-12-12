@@ -1,0 +1,67 @@
+html, body {
+	width: 100%;
+	height: 100%;
+}
+
+.timer{
+	width: 100px;
+	height: 25px;
+	background: green;
+	cursor: pointer;
+	border-radius: 3px;
+	margin: 50px auto;
+	color: whitesmoke;
+	text-align: center;
+	padding-top: 5px;
+}
+.stop {
+background: red;
+}
+.wrapperTop {
+	height: 30px;
+	width: 750px;
+	margin: 0 auto;
+}
+.wrapperBottom {
+	height: 30px;
+	max-width: 750px;
+	margin: 0 auto;
+}
+.wrapperAnswer {
+	height: 30px;
+	max-width: 750px;
+	margin: 0 auto;
+}
+.numbers{
+	width: 75px;
+	height: 40px;
+	background: #386893;
+	float: left;
+	text-align: center;
+	padding-top: 10px;
+	box-sizing: border-box;
+	
+}
+
+
+.bottom {
+	border-bottom: 1px solid black;
+}
+
+input {
+	width: 69px;
+	height: 40px;
+	text-align: center;
+}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+.answer {
+	background: green;
+}
+.inner {
+	display: inline-block;
+}
+
