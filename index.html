@@ -12,18 +12,21 @@
 
 <body ng-controller="mathGameController">
 
-
+<div class="mainWrapper">
 	<div class="timer start"ng-click="numberGenerator()">Start</div>
-	<div class="wrapperNumbers">
-		<div class="numbers top" ng-repeat="numerator in top track by $index" ng-cloak>{{numerator}}</div>
-		<div class="numbers bottom" ng-repeat="denominator in bottom track by $index" ng-cloak>{{denominator}}</div>
-		<input type="number" ng-repeat="inputs in top track by $index" ng-model="userAnswers[$index]" ng-cloak/>
-		<div class="numbers answer" ng-repeat="tester in wrongAnswers track by $index" ng-cloak ng-show="tester === true">&#9989</div>
-		<div class="numbers answer" ng-repeat="tester in wrongAnswers track by $index" ng-cloak ng-show="tester === false">&#10060 {{value}}</div>
-		
+	<div class="wrapperNumbers" ng-repeat="numbers in questions track by $index">
+		<div class="numbers top">{{numbers.top}}</div>
+		<div class="numbers bottom">{{numbers.bottom}}</div>
+		<input type="numbers" ng-model="userAnswers[$index]" ng-disabled="disable" />
+		<div class="numbers green" ng-show="answerCheck">&#9989</div>
+		<div class="numbers green" ng-show="!answerCheck">&#10060</div>
 	</div>
-	<div class="timer stop" ng-click="stopTime()" ng-if="shower">Stop</div>
+	<div class="timer stop" ng-click="stopTime()" ng-if="shower">Submit</div>
 
+
+
+
+</div>
 
 
 
