@@ -8,7 +8,7 @@ app.controller("mathGameController", function($scope, mathGameService) {
 	
 	$scope.questions = [];
 	$scope.userAnswers = {};
-	$scope.answerCheck = [];
+	
 	
 
 	$scope.numberGenerator = function() {
@@ -24,12 +24,12 @@ app.controller("mathGameController", function($scope, mathGameService) {
 		for (var i = 0; i < topNumbers.length; i++) {
 			var numerator = Math.floor((Math.random() * topNumbers[i]) + random + 2); 
 			var denominator= Math.ceil((Math.random() * topNumbers[i] + 2) + random2);
-			// var answers = numerator + denominator;
+			var answers = numerator + denominator;
 
 			$scope.questions.push({
 				top: numerator,
-				bottom: denominator
-				// answer: answers,			
+				bottom: denominator,
+				answer: answers			
 			});
 		}
 
@@ -40,8 +40,9 @@ app.controller("mathGameController", function($scope, mathGameService) {
 	$scope.stopTime = function() {
 		$scope.shower = false;
 		$scope.disable = true;
+		$scope.answerCheck = [];
 		angular.forEach($scope.userAnswers, function(v, i) {
-			console.log($scope.questions[i].answer)
+			console.log($scope.questions)
 			if ($scope.userAnswers[i] != $scope.questions[i].answer) {
 				$scope.answerCheck.push(false);
 			} else {

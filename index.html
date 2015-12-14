@@ -18,8 +18,8 @@
 		<div class="numbers top">{{numbers.top}}</div>
 		<div class="numbers bottom">{{numbers.bottom}}</div>
 		<input type="numbers" ng-model="userAnswers[$index]" ng-disabled="disable" />
-		<div class="numbers green" ng-show="answerCheck">&#9989</div>
-		<div class="numbers green" ng-show="!answerCheck">&#10060</div>
+		<div class="numbers green" ng-if="answerCheck === true">&#9989</div>
+		<div class="numbers green" ng-if="answerCheck ===  false">&#10060</div>
 	</div>
 	<div class="timer stop" ng-click="stopTime()" ng-if="shower">Submit</div>
 
