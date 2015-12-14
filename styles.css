@@ -9,30 +9,22 @@ html, body {
 	background: green;
 	cursor: pointer;
 	border-radius: 3px;
-	margin: 50px auto;
+	margin: 0 auto;
 	color: whitesmoke;
 	text-align: center;
 	padding-top: 5px;
 }
-.stop {
-background: red;
-}
-.wrapperTop {
+
+.wrapperNumbers {
 	height: 30px;
 	width: 750px;
-	margin: 0 auto;
+	margin: 50px auto 50px auto;
 }
-.wrapperBottom {
-	height: 30px;
-	max-width: 750px;
-	margin: 0 auto;
+.stop {
+	margin: 140px auto 10px auto;
+	background: red;
 }
-.wrapperAnswer {
-	height: 30px;
-	max-width: 750px;
-	margin: 0 auto;
-}
-.numbers{
+.numbers {
 	width: 75px;
 	height: 40px;
 	background: #386893;
@@ -40,12 +32,7 @@ background: red;
 	text-align: center;
 	padding-top: 10px;
 	box-sizing: border-box;
-	
-}
-
-
-.bottom {
-	border-bottom: 1px solid black;
+	border: 1px solid black;
 }
 
 input {
@@ -55,13 +42,11 @@ input {
 }
 input[type=number]::-webkit-inner-spin-button, 
 input[type=number]::-webkit-outer-spin-button { 
-  -webkit-appearance: none; 
-  margin: 0; 
+	-webkit-appearance: none; 
+	margin: 0; 
 }
 .answer {
 	background: green;
 }
-.inner {
-	display: inline-block;
-}
+
 

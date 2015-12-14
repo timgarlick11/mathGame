@@ -6,20 +6,19 @@ app.controller("mathGameController", function($scope, mathGameService) {
 
 	var topNumbers = [2,3,5,7,9,2,4,6,8,3];
 	var bottomNumbers = [5,4,6,8,2,3,5,7,9,7];
-	$scope.timmy = [1,2,3,4,5,6,7,8,9,0];
+
 	$scope.top = [];
 	$scope.bottom = [];
 	$scope.answerSheet = {};
 	$scope.userAnswers = {};
-	$scope.wrongAnswers = {};
-
+	$scope.wrongAnswers = [];
 
 	$scope.numberGenerator = function() {
 		$scope.top = [];// empty out the array
 		$scope.bottom = [];//empty out the array
 		$scope.answerSheet = {};//empty out the object
 		$scope.userAnswers = {};// empty out the object
-		$scope.wrongAnswers = {};// empty out object
+		$scope.wrongAnswers = [];// empty out object
 		$scope.shower = true;
 
 		var random1 = Math.floor((Math.random() * 3) + 4);
@@ -42,12 +41,7 @@ app.controller("mathGameController", function($scope, mathGameService) {
 			$scope.answerSheet[i] = answerSheet;
 			console.log($scope.answerSheet);
 		}
-
-
 	};
-
-
-
 	$scope.stopTime = function() {
 		console.log($scope.userAnswers);
 		var tester = angular.equals($scope.answerSheet, $scope.userAnswers);
@@ -59,17 +53,13 @@ app.controller("mathGameController", function($scope, mathGameService) {
 		angular.forEach($scope.answerSheet, function(v, i) {
 			console.log(v,i)
 			if ($scope.userAnswers[i] != v) {
-				$scope.wrongAnswers[i] = false;
+				$scope.wrongAnswers.push(false);
 			} else {
-				$scope.wrongAnswers[i] = true;
+				$scope.wrongAnswers.push(true);
 			}
 			console.log($scope.wrongAnswers);
 		});
-
-
 	}
-	
-
 });
 
 
