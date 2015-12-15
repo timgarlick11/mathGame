@@ -8,28 +8,18 @@ html, body {
 	width: 750px;
 }
 
-.timer{
-	width: 100px;
-	height: 25px;
-	background: green;
-	cursor: pointer;
-	border-radius: 3px;
-	margin: 0 auto;
-	color: whitesmoke;
-	text-align: center;
-	padding-top: 5px;
+.timer {
+width: 200px;
+font-size: 65px;
+margin: 100px auto -100px auto;
 }
 
-
-.stop {
-	margin: 200px auto 10px auto;
-	background: red;
-}
 .wrapperNumbers {
-	margin: 0 auto;
+	margin: 30px auto 30px auto;
 	float: left;
 }
 .numbers {
+	border-radius: 2px;
 	width: 75px;
 	height: 40px;
 	background: #386893;
@@ -39,8 +29,22 @@ html, body {
 	border: 1px solid black;
 }
 
+button {
+	height: 120px;
+}
+button.top {
+	position: relative;
+	top: 150px;
+	left:-72px;
+	
+}
+button.bottom {
+	position: relative;
+	top: -150px;
+	left:750px;
+}
 input {
-	width: 69px;
+	width: 75px;
 	height: 40px;
 	text-align: center;
 }
@@ -50,7 +54,8 @@ input[type=number]::-webkit-outer-spin-button {
 	margin: 0; 
 }
 .answer {
-	background: green;
+	background: white;
+	border: none;
 }
 
 
